@@ -29,16 +29,18 @@
 .brand-logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   font-weight: 700;
   font-size: 1.15rem;
   color: var(--text-primary);
   letter-spacing: -0.02em;
+  flex-shrink: 0;
 }
 
 .brand-logo .gemini-sparkle {
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
 }
 
 .brand-logo .pro-badge {
@@ -51,6 +53,16 @@
   border: 1px solid rgba(26, 115, 232, 0.2);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.header-btn-mobile {
+  display: none;
+}
+
+.header-btn-desktop {
+  display: inline;
 }
 
 .nav-links {
@@ -981,25 +993,88 @@
 }
 
 @media (max-width: 768px) {
+  .site-header {
+    background: rgba(255, 255, 255, 0.96);
+  }
+  .header-container {
+    height: 60px;
+  }
+  .header-btn-desktop {
+    display: none;
+  }
+  .header-btn-mobile {
+    display: inline;
+  }
+  .header-cta-btn {
+    padding: 8px 14px;
+    font-size: 0.82rem;
+    font-weight: 600;
+  }
+  .brand-logo {
+    font-size: 1.05rem;
+    gap: 6px;
+  }
+  .brand-logo .gemini-sparkle {
+    width: 22px;
+    height: 22px;
+  }
+  .brand-logo .pro-badge {
+    font-size: 0.65rem;
+    padding: 2px 6px;
+  }
   .hero-section {
-    padding: 40px 0 50px;
+    padding: 30px 0 45px;
+  }
+  .announcement-badge {
+    font-size: 0.78rem;
+    padding: 6px 12px;
+    line-height: 1.35;
+    margin-bottom: 18px;
+  }
+  .hero-title {
+    font-size: clamp(1.65rem, 5vw, 2.2rem);
+    margin-bottom: 16px;
+  }
+  .hero-description {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
   }
   .hero-pricing-box {
-    padding: 20px 18px;
+    padding: 20px 14px;
+    border-radius: var(--radius-md);
   }
   .hero-price-amount {
-    font-size: 2.1rem;
+    font-size: 2.2rem;
+  }
+  .hero-trust-row {
+    flex-wrap: wrap;
+    gap: 10px 14px;
   }
   .pricing-card-highlight {
-    padding: 36px 20px;
+    padding: 32px 16px;
+    border-radius: var(--radius-lg);
   }
   .plan-price-val {
-    font-size: 2.6rem;
+    font-size: 2.4rem;
+  }
+  .plan-perks-list {
+    padding: 0;
   }
   .sticky-mobile-bar {
     display: flex;
   }
   .bento-card {
-    padding: 24px;
+    padding: 22px 18px;
   }
 }
+
+@media (max-width: 380px) {
+  .header-cta-btn {
+    padding: 7px 10px;
+    font-size: 0.76rem;
+  }
+  .brand-logo span:not(.pro-badge) {
+    font-size: 0.95rem;
+  }
+}
+
