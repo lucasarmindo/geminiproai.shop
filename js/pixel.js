@@ -4,8 +4,8 @@
  */
 
 window.GEMINI_CONFIG = {
-  // Substitua pelo seu Pixel ID do Facebook Ads (ex: '123456789012345')
-  pixelId: '123456789012345',
+  // Pixel ID oficial configurado
+  pixelId: '1432017695655285',
   
   // URL de destino do checkout (Cakto Pay)
   checkoutUrl: 'https://pay.cakto.com.br/tpht2my_1048893',
